@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --jauneMain: #ecb325;
+}
+
+.yellowColor {
+    color: var(--jauneMain);
+}
+
+.yellowBackground {
+    background-color: var(--jauneMain);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.goal {
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftGoal, .rightGoal {
+    height: 100%;
+}
+
+.leftGoal {
+    width: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rightGoal {
+    width: 47%;
+}
+
+.leftGoal > h1 {
+    font-size: 3.5rem;
+    font-weight: 750;
+}
+
+.leftGoal > h2 {
+    font-size: 2rem;
+    font-weight: 750;
+}
+
+.leftGoal > h3 {
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+
+.leftGoal > * {
+    margin: 30px 0 0 90px;
+}
+
+.boutonJaune {
+    background-color: var(--jauneMain);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.boutonJaune:hover {
+    background-color: white;
+    color: var(--jauneMain);
+    border: 1px solid black;
+}
+
+.leftGoal > .boutonJaune {
+    width: 150px;
+}
