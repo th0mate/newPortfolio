@@ -129,6 +129,9 @@ body {
 .boutonJaune {
     background-color: var(--jauneMain);
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 1.2rem;
@@ -137,19 +140,29 @@ body {
     transition: background-color 0.4s;
     text-decoration: none;
     text-align: center;
+    white-space: nowrap;
+}
+
+.boutonJaune > img {
+    width: 20px;
+    margin-left: 15px;
 }
 
 .boutonJaune:hover {
     background-color: black;
 }
 
+.invert {
+    filter: invert(1);
+}
+
 .leftGoal > .boutonJaune {
-    width: 150px;
+    width: 170px;
 }
 
 
 .aPropos {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .separationAccueil {
@@ -172,6 +185,8 @@ body {
 .separationAccueil > div:not(.bandeau) > section {
     width: 93%;
     padding-right: 7%;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 
@@ -290,5 +305,59 @@ body {
 
 .gridPropos > div > p {
     font-size: 0.7em;
+}
+
+.wrapPropos {
+    width: 40%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapPropos > div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.wrapPropos > div > img {
+    width: 70px;
+}
+
+.wrapPropos > div > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+.wrapPropos > div > div > h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.wrapPropos > div > div > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.wrapBoutonsPropos {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+
+.competences {
+    min-height: 100vh;
 }
 
