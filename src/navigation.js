@@ -13,6 +13,7 @@ function afficherVue(nomFichier) {
             return response.text();
         })
         .then(data => {
+            pageActuelle = nomFichier;
             document.querySelector('#contenu').innerHTML = data;
             creerCookieOuStockageLocal(nomFichier);
             window.scrollTo(0, 0);

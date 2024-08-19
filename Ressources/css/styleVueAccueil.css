@@ -17,6 +17,51 @@ html {
     background-color: var(--jauneMain);
 }
 
+nav {
+    display: flex;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--jauneMain);
+    position: fixed;
+    width: 35px;
+    border-radius: 50px;
+    min-height: 300px;
+    z-index: 5;
+}
+
+nav > img {
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: filter 0.4s;
+}
+
+nav > img:hover {
+    filter: invert(0.5);
+}
+
+.active {
+    filter: invert(1);
+}
+
+nav > img:first-child {
+    margin-top: 15px;
+}
+
+nav > img:last-child {
+    margin-bottom: 15px;
+}
+
+nav > span {
+    border-left: 1.5px dotted black;
+    height: 30px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -30,16 +75,14 @@ body {
 
 .goal {
     min-height: 100vh;
-    max-height: 100vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.leftGoal, .rightGoal {
-    height: 100%;
-}
+
 
 .leftGoal {
     width: 53%;
@@ -49,7 +92,16 @@ body {
 }
 
 .rightGoal {
+    height: 100%;
     width: 47%;
+    background-color: #928f96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightGoal > img {
+    max-width: 500px;
 }
 
 .leftGoal > h1 {
@@ -85,15 +137,158 @@ body {
     transition: background-color 0.4s;
     text-decoration: none;
     text-align: center;
-    border: 1px solid transparent;
 }
 
 .boutonJaune:hover {
-    background-color: white;
-    color: var(--jauneMain);
-    border: 1px solid black;
+    background-color: black;
 }
 
 .leftGoal > .boutonJaune {
     width: 150px;
 }
+
+
+.aPropos {
+    height: 100vh;
+}
+
+.separationAccueil {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+.separationAccueil > div:not(.bandeau) {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.separationAccueil > div:not(.bandeau) > section {
+    width: 93%;
+    padding-right: 7%;
+}
+
+
+.bandeau {
+    height: 100vh;
+    width: 20%;
+    background-color: var(--jauneMain);
+    position: sticky;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bandeau > img {
+    width: 100%;
+}
+
+.bandeau > .summary {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary > h4 {
+    margin: 0;
+    transition: color 0.4s;
+    cursor: pointer;
+}
+
+.summary > h4:hover {
+    color: #d3d3d3;
+}
+
+.summary > .textActive {
+    color: white;
+}
+
+.summary > span {
+    border-left: 1.5px dotted black;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.summary > .rond {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.aPropos {
+    padding-top: 30px;
+}
+
+
+.enTete {
+    margin-top: 5px;
+    width: 90%;
+    text-align: center;
+    font-size: 3em;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.enTete > * {
+    margin: 0;
+}
+
+.light {
+    font-weight: normal;
+}
+
+.infosPropos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.gridPropos {
+    width: 55%;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.gridPropos > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 0.5px white;
+}
+
+.gridPropos > div > h1 {
+    color: var(--jauneMain);
+    font-size: 3em;
+    margin: 0;
+}
+
+.gridPropos > div > p {
+    font-size: 0.7em;
+}
+
