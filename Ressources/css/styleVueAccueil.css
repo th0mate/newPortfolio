@@ -101,7 +101,7 @@ body {
 }
 
 .rightGoal > img {
-    max-width: 500px;
+    max-width: 100%;
 }
 
 .leftGoal > h1 {
@@ -254,7 +254,7 @@ body {
     margin-top: 5px;
     width: 90%;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     border: 1px solid black;
     padding: 10px;
 }
