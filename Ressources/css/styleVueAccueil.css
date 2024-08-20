@@ -361,3 +361,43 @@ body {
     min-height: 100vh;
 }
 
+
+.chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #363636;
+    stroke-width: 1;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2;
+    stroke: var(--jauneMain);
+    /* bords arrondis */
+    stroke-linecap: round;
+}
+
+.percentage {
+    fill: #363636;
+    font-size: 0.5em;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+@keyframes progress {
+    0% {
+        stroke: transparent;
+        stroke-dasharray: 0 100;
+    }
+}

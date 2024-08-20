@@ -13,7 +13,7 @@ function afficherVue(nomFichier) {
             return response.text();
         })
         .then(data => {
-            pageActuelle = nomFichier;
+            window.pageActuelle = nomFichier;
             document.querySelector('#contenu').innerHTML = data;
             creerCookieOuStockageLocal(nomFichier);
             window.scrollTo(0, 0);
@@ -33,3 +33,18 @@ if (cookieExists()) {
 } else {
     afficherVue('vueAccueil');
 }
+
+
+
+Object.defineProperty(window, 'pageActuelle', {
+    get() {
+        return pageActuelle;
+    },
+    set(value) {
+        if (value === 'vueAccueil') {
+            setTimeout(() => {
+                animerCercles();
+            }, 1000);
+        }
+    }
+});
