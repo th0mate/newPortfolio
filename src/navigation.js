@@ -42,9 +42,12 @@ Object.defineProperty(window, 'pageActuelle', {
     },
     set(value) {
         if (value === 'vueAccueil') {
+            estPageAccueil = true;
             setTimeout(() => {
                 animerCercles();
             }, 1000);
+        } else {
+            estPageAccueil = false;
         }
     }
 });

@@ -1,6 +1,6 @@
 document.addEventListener('scroll', function () {
 
-    if (pageActuelle === 'vueAccueil') {
+    if (estPageAccueil) {
 
         const sections = document.querySelectorAll('section');
         const icons = document.querySelectorAll('.icon');

@@ -19,7 +19,7 @@ function animerCercles() {
                         start = ts;
                     }
                     let progress = (ts - start) / duration;
-                    percentage.textContent = Math.floor(progress * dataNumber) + "%";
+                    //percentage.textContent = Math.floor(progress * dataNumber) + "%";
                     if (progress < 1) {
                         requestAnimationFrame(step);
                     }
