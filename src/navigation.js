@@ -51,3 +51,19 @@ Object.defineProperty(window, 'pageActuelle', {
         }
     }
 });
+
+
+
+function redirectTo(anchorId, isElement = false) {
+    let element;
+    if (!isElement) {
+        element = document.getElementById(anchorId);
+    } else {
+        element = anchorId;
+    }
+
+    if (element) {
+
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+}

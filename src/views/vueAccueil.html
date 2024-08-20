@@ -1,15 +1,17 @@
 <section class="goal" id="section1">
 
     <nav>
-        <img id="icon1" class="active icon" src="../Ressources/img/accueil.png" alt="">
+        <img id="icon1" class="active icon" src="../Ressources/img/accueil.png" alt="" onclick="redirectTo('section1')">
         <span></span>
-        <img id="icon2" class="icon" src="../Ressources/img/utilisateur.png" alt="">
+        <img id="icon2" class="icon" src="../Ressources/img/utilisateur.png" alt="" onclick="redirectTo('section2')">
         <span></span>
-        <img id="icon3" class="icon" src="../Ressources/img/competences.png" alt="">
+        <img id="icon3" class="icon" src="../Ressources/img/competences.png" alt="" onclick="redirectTo('section3')">
         <span></span>
-        <img id="icon4" class="icon" src="../Ressources/img/accueil.png" alt="">
+        <img id="icon4" class="icon" src="../Ressources/img/projet.png" alt="" onclick="redirectTo('section4')">
         <span></span>
-        <img id="icon5" class="icon" src="../Ressources/img/accueil.png" alt="">
+        <img id="icon5" class="icon" src="../Ressources/img/statistiques.png" alt="" onclick="redirectTo('section5')">
+        <span></span>
+        <img id="icon6" class="icon" src="../Ressources/img/chronologie.png" alt="" onclick="redirectTo('section6')">
     </nav>
 
     <div class="leftGoal">
@@ -36,15 +38,17 @@
         <div class="summary">
             <div class="rond"></div>
             <span></span>
-            <h4 id="text1" class="text">ACCUEIL</h4>
+            <h4 onclick="redirectTo('section1')" id="text1" class="text">ACCUEIL</h4>
             <span></span>
-            <h4 id="text2" class="text">A PROPOS DE MOI</h4>
+            <h4 onclick="redirectTo('section2')" id="text2" class="text">A PROPOS DE MOI</h4>
             <span></span>
-            <h4 id="text3" class="text">MES COMPETENCES</h4>
+            <h4 onclick="redirectTo('section3')" id="text3" class="text">MES COMPETENCES</h4>
             <span></span>
-            <h4 id="text4" class="text">MON PARCOURS</h4>
+            <h4 onclick="redirectTo('section4')" id="text4" class="text">MES PROJETS</h4>
             <span></span>
-            <h4 id="text5" class="text">ME CONTACTER</h4>
+            <h4 onclick="redirectTo('section5')" id="text5" class="text">MES STATISTIQUES</h4>
+            <span></span>
+            <h4 onclick="redirectTo('section6')" id="text6" class="text">MON PARCOURS</h4>
             <span></span>
             <div class="rond"></div>
         </div>
@@ -135,57 +139,102 @@
                     </div>
 
                     <div class="content">
-
+                        <h3>PHP 8</h3>
+                        <p>Bases apprises en 2022. Étudié davantage en BUT.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="circle">
-
+                    <div class="circle-animation-number">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text data-number="95" x="18" y="20.35" class="percentage">HTML</text>
+                        </svg>
                     </div>
 
                     <div class="content">
-
+                        <h3>HTML 5</h3>
+                        <p>Bases vues en 2019. Appris complètement en 2022.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="circle">
-
+                    <div class="circle-animation-number">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text data-number="80" x="18" y="20.35" class="percentage">CSS</text>
+                        </svg>
                     </div>
 
                     <div class="content">
-
+                        <h3>CSS 3</h3>
+                        <p>Bases étudiées en 2019. Consolidé en BUT entre 2023 et 2024.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="circle">
-
+                    <div class="circle-animation-number">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text data-number="70" x="18" y="20.35" class="percentage">SQL</text>
+                        </svg>
                     </div>
 
                     <div class="content">
-
+                        <h3>SQL</h3>
+                        <p>Appris via MySQL et MariaDB entre 2022 et 2024.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="circle">
-
+                    <div class="circle-animation-number">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text data-number="75" x="18" y="20.35" class="percentage">JS</text>
+                        </svg>
                     </div>
 
                     <div class="content">
-
+                        <h3>JS</h3>
+                        <p>En cours d'apprentissage depuis 2023.</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="circle">
-
+                    <div class="circle-animation-number">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text data-number="65" x="18" y="20.35" class="percentage">JAVA</text>
+                        </svg>
                     </div>
 
                     <div class="content">
+                        <h3>JAVA 18+</h3>
+                        <p>Appris intégralement en 2022 et 2023.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="wrapCompetences">
+
+                <div>
+                    <img src="../Ressources/img/outils.png" alt="">
+                    <div>
+                        <h3>OUTILS UTILISÉS</h3>
+                        <p>Pour tous mes projets, j'utilise les outils GitLab et GitHub, en complément des IDEs JetBrains, tels que IntelliJ, PhpStorm, WebStorm, PyCharm, DataGrip, etc.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="../Ressources/img/langages.png" alt="">
+                    <div>
+                        <h3>AUTRES LANGAGES</h3>
+                        <p>Lors de mon parcours en BUT informatique, j'ai également étudié les langages TWIG, YAML, C...</p>
                     </div>
                 </div>
 
