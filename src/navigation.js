@@ -45,6 +45,7 @@ Object.defineProperty(window, 'pageActuelle', {
             estPageAccueil = true;
             setTimeout(() => {
                 animerCercles();
+                animerCarousel();
             }, 1000);
         } else {
             estPageAccueil = false;
