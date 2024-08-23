@@ -467,42 +467,15 @@ body {
 }
 
 
-.carousel {
-    margin-top: 30px;
-    width: 98%;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+/*
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #111;
+        color: #fff;
+    }
 }
 
-.slides {
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: calc(100% * 3);
-}
-
-.slide {
-    height: 100%;
-    width: 100%;
-    flex-shrink: 0;
-    background-color: red;
-}
-
-.slide img {
-    width: 100%;
-    display: block;
-}
-
-@keyframes slide {
-    0% { transform: translateX(0%); }
-    33% { transform: translateX(0%); }
-    50% { transform: translateX(-100%); }
-    83% { transform: translateX(-100%); }
-    100% { transform: translateX(-200%); }
-}
+ */
 
 .boutonCarousel {
     position: absolute;
@@ -540,4 +513,76 @@ body {
 .boutonCarousel > img {
     width: 20px;
     filter: invert(1);
+}
+
+.mesProjets {
+    margin-top: 50px;
+    min-height: 550px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2%;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+.projet {
+    overflow: hidden;
+    height: 98%;
+    width: 98%;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.projet > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hoverred {
+    background-color: var(--jauneMain);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 0;
+    width: 96%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    padding: 2%;
+}
+
+.hoverred > * {
+    padding: 0;
+    display: none;
+}
+
+.hoverred > h2 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+.hoverred > h3 {
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+
+.projet:hover > .hoverred > * {
+    display: flex;
+}
+
+.projet:hover > .hoverred {
+    height: 80px;
 }
