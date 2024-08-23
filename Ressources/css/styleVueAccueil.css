@@ -586,3 +586,48 @@ body {
 .projet:hover > .hoverred {
     height: 80px;
 }
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 98%;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: #e4e4e4;
+    margin-top: 50px;
+}
+
+.titre {
+    font-weight: 350;
+}
+
+.stats > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.stats > div > span {
+    min-height: 50vh;
+    width: 1px;
+    background-color: black;
+}
+
+.stats > div > figure {
+    width: 60%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
