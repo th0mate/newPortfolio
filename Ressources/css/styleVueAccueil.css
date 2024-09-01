@@ -700,3 +700,62 @@ Quand une slide est survolée, on arrête temporairment l'animation
 .data > img {
     margin-left: 15px;
 }
+
+.wrapParcours {
+    width: 98%;
+}
+
+.wrapParcours > img {
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+footer {
+    background-color: #2b2a2a;
+    max-width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    color: white;
+}
+
+.contacts {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    height: 100%;
+    width: 25%;
+    color: white;
+}
+
+.contacts > a {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    text-decoration: none;
+}
+
+.contacts > a > img {
+    width: 35px;
+}
+
+.contacts > a > h3 {
+    text-align: left;
+    width: 80%;
+}
+
+
+.credits {
+    flex-shrink: 0;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+}
