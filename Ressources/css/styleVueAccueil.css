@@ -621,9 +621,7 @@ body {
     z-index: 1;
 }
 
-/*
-Quand une slide est survolée, on arrête temporairment l'animation
- */
+
 .slides:hover {
     animation-play-state: paused;
 }
