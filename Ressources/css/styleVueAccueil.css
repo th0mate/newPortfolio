@@ -215,6 +215,7 @@ body {
 .bandeau {
     height: 100vh;
     width: 20%;
+    max-width: 200px;
     background-color: var(--jauneMain);
     position: sticky;
     z-index: 5;
@@ -304,7 +305,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #2b2a2a;
 }
 
 .gridPropos > div {
@@ -550,47 +551,10 @@ body {
     grid-auto-rows: 1fr;
 }
 
-.carousel {
-    margin: auto;
-    width: 98%;
-    max-width: 800px;
-    max-height: 500px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.slides {
-    display: flex;
-    width: 100%;
-    animation: slide 9s infinite;
-}
-
-.slide {
-    width: 100%;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.slide > .infosProjets {
-    background-color: var(--jauneMain);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    height: 100px;
-    width: 96%;
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    color: black;
-    transition: all 0.5s ease-in-out;
-    padding: 2%;
-}
 
 .infosProjets > div {
     height: 100%;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -606,39 +570,75 @@ body {
     font-weight: 500;
     margin-bottom: 5px;
     margin-top: 5px;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .infosProjets > div > h3 {
     font-weight: normal;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
-.slide > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.conteneurVerti {
+    max-width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding-top: 50px;
+    z-index: 0;
+}
+
+.conteneurVerti > .vertical {
+    width: 23%;
+    min-height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: width 0.5s ease-in-out;
+    z-index: 0;
+    margin: 5px;
+    box-shadow: black 0 0 5px;
+}
+
+.conteneurVerti > .vertical:hover {
+    width: 80%;
     z-index: 1;
 }
 
-
-.slides:hover {
-    animation-play-state: paused;
+.conteneurVerti > .vertical:hover > .infosProjets {
+    height: 80px;
 }
 
-
-@keyframes slide {
-    0% { transform: translateX(0%); }
-    12% { transform: translateX(0%); }
-    24% { transform: translateX(-100%); }
-    36% { transform: translateX(-100%); }
-    48% { transform: translateX(-200%); }
-    60% { transform: translateX(-200%); }
-    72% { transform: translateX(-300%); }
-    84% { transform: translateX(-300%); }
-    100% { transform: translateX(0%); }
+.conteneurVerti > .vertical > img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: 2;
+    position: absolute;
+    left: 0;
 }
 
+.conteneurVerti > .vertical > .infosProjets {
+    background-color: var(--jauneMain);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 0;
+    width: 96%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    color: black;
+    padding: 2%;
+    transition: height 0.5s ease-in-out;
+}
 
 
 .stats {
@@ -652,6 +652,7 @@ body {
     padding: 2%;
     background-color: #e4e4e4;
     margin-top: 50px;
+    border-radius: 10px;
 }
 
 .titre {
@@ -711,7 +712,6 @@ body {
 footer {
     background-color: #2b2a2a;
     max-width: 100%;
-    min-height: 200px;
     display: flex;
     justify-content: space-between;
     padding: 2%;
@@ -725,7 +725,7 @@ footer {
     justify-content: flex-start;
     text-align: left;
     height: 100%;
-    width: 25%;
+    width: 28%;
     color: white;
 }
 
@@ -735,10 +735,12 @@ footer {
     justify-content: space-between;
     margin-bottom: 2%;
     text-decoration: none;
+    align-content: center;
+    color: white;
 }
 
 .contacts > a > img {
-    width: 35px;
+    height: 50px;
 }
 
 .contacts > a > h3 {
@@ -750,10 +752,13 @@ footer {
 .credits {
     flex-shrink: 0;
     width: 25%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     text-align: left;
     color: white;
+}
+
+.credits > * {
+    margin: 0;
 }
