@@ -491,16 +491,6 @@ body {
 }
 
 
-/*
-@media (prefers-color-scheme: dark) {
-    html {
-        background-color: #111;
-        color: #fff;
-    }
-}
-
- */
-
 .boutonCarousel {
     position: absolute;
     top: 50%;
@@ -761,4 +751,85 @@ footer {
 
 .credits > * {
     margin: 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #111;
+        color: #fff;
+    }
+
+    .invertLight {
+        filter: invert(1);
+    }
+
+    .enTete {
+        border: 1px solid white;
+    }
+
+    .stats, .card {
+        background-color: #363636 !important;
+        color: white !important;
+    }
+
+    .circle-bg {
+        stroke: #a3a3a3;
+    }
+
+    .circle {
+        stroke: var(--jauneMain);
+    }
+
+    .percentage {
+        fill: white;
+    }
+
+    .bandeau {
+        color: black;
+    }
+
+    .wrapCompetences {
+        background-color: #363636;
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .bandeau {
+        display: none;
+    }
+
+    .separationAccueil {
+        align-items: flex-start;
+    }
+
+    .separationAccueil > div:not(.bandeau) {
+        width: 100%;
+    }
+
+    .separationAccueil > div:not(.bandeau) > section {
+        width: 85%;
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    nav {
+        display: none;
+    }
+
+    .separationAccueil {
+        align-items: center;
+    }
+
+    .separationAccueil > div:not(.bandeau) > section {
+        width: 97%;
+        padding-right: 0;
+    }
+
 }
