@@ -1,84 +1,50 @@
-
-
-/**
- * Permet d'afficher le texte de description des projets si la largeur de l'écran est supérieure à 700px
- * @param numer
- */
-function centerElement(numer) {
-    var element = document.getElementById('p' + numer);
-    if (element) {
-        var hoverredElement = element.querySelector('.hoverred');
-        if (hoverredElement) {
-            hoverredElement.style.height = "100px";
-            var children = hoverredElement.children;
-
-            for (var i = 0; i < children.length; i++) {
-                children[i].style.display = "flex";
-            }
-        }
+function change_period(period){
+    var monthly = document.getElementById("monthly");
+    var semester = document.getElementById("semester");
+    var annual = document.getElementById("annual");
+    if(period === "monthly"){
+        semester.className +=  "switch semester";
+        annual.className +=  "switch annual";
+        setTimeout(function(){
+            monthly.className +=  "switch monthly active";
+        },500);
+    }else if(period === "semester"){
+        monthly.className +=  "switch monthly";
+        annual.className +=  "switch annual";
+        setTimeout(function(){
+            semester.className +=  "switch semester active";
+        },500);
+    }else{
+        monthly.className +=  "switch monthly";
+        semester.className +=  "switch semester";
+        setTimeout(function(){
+            annual.className +=  "switch annual active";
+        },500);
     }
 }
 
-/**
- * Permet d'enlever le texte des projets si la largeur de l'écran est inférieure à 700px
- * @param numer le numéro du projet
- */
-function uncenterElement(numer) {
-    var element = document.getElementById('p' + numer);
-    if (element) {
-        var hoverredElement = element.querySelector('.hoverred');
-        if (hoverredElement) {
-            if (window.innerWidth < 700) {
-                hoverredElement.style.height = "0px";
-                var children = hoverredElement.children;
+function change_period2(period){
+    var monthly = document.getElementById("monthly2");
+    var semester = document.getElementById("semester2");
+    var annual = document.getElementById("annual2");
+    var selector = document.getElementById("selector");
+    if(period === "clair"){
+        selector.style.left = 0;
+        selector.style.width = monthly.clientWidth + "px";
+        selector.style.backgroundColor = "#ecb325";
+        selector.innerHTML = '<img src="Ressources/img/soleil.png" alt="">';
+        //on force à passer le mode clair sur le site avec @media (prefers-color-scheme: dark)
 
-                for (var i = 0; i < children.length; i++) {
-                    children[i].style.display = "none";
-                }
-            }
-        }
+
+    }else if(period === "auto"){
+        selector.style.left = monthly.clientWidth + "px";
+        selector.style.width = semester.clientWidth + "px";
+        selector.innerHTML = '<img src="Ressources/img/auto.png" alt="">';
+        selector.style.backgroundColor = "#ecb325";
+    }else{
+        selector.style.left = monthly.clientWidth + semester.clientWidth + 1 + "px";
+        selector.style.width = annual.clientWidth + "px";
+        selector.innerHTML = '<img src="Ressources/img/lune.png" alt="">';
+        selector.style.backgroundColor = "#ecb325";
     }
 }
-
-var elements = document.querySelectorAll('[id^="p"]');
-
-var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-        if (entry.target && entry.isIntersecting) {
-            var id = entry.target.id;
-            if (id) {
-                var numer = id.substring(1);
-                if (window.innerWidth < 900) {
-                    centerElement(numer);
-                }
-            }
-        }
-    });
-}, {threshold: [0.9, 1]});
-
-elements.forEach(function (element) {
-    if (element) { // Vérifiez si l'élément existe
-        observer.observe(element);
-    }
-});
-
-//si la visibilité des éléments est inférieure à 0.7, on les cache
-var observer2 = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-        if (entry.target && entry.isIntersecting) {
-            var id = entry.target.id;
-            if (id) {
-                if (window.innerWidth < 900) {
-                    var numer = id.substring(1);
-                    uncenterElement(numer);
-                }
-            }
-        }
-    });
-}, {threshold: [0, 0.9]});
-
-elements.forEach(function (element) {
-    if (element) { // Vérifiez si l'élément existe
-        observer2.observe(element);
-    }
-});
