@@ -141,10 +141,11 @@ body {
 
 .switchLight {
     width: 350px;
-    position: absolute;
+    position: fixed;
     top: 15px;
-    left: 20px;
+    right: 20px;
     z-index: 10;
+
 }
 
 .switch_3_ways_v2 {
@@ -891,11 +892,11 @@ footer {
 }
 
 
-@media (prefers-color-scheme: dark) {
-    html {
-        background-color: #111;
-        color: #fff;
-    }
+.dark {
+
+    background-color: #111;
+    color: #fff;
+
 
     .invertLight {
         filter: invert(1);
